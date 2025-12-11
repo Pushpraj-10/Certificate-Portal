@@ -19,8 +19,8 @@ export default function LoginPage() {
     // Simulate API call/Network delay
     await new Promise((resolve) => setTimeout(resolve, 800));
 
-    // Navigate to certificate generator
-    router.push('/certificate');
+    // Navigate to certificate generator with email carried forward
+    router.push(`/certificate?email=${encodeURIComponent(formData.email)}`);
   };
 
   return (
